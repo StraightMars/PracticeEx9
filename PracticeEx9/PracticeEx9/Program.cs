@@ -43,19 +43,12 @@ namespace PracticeEx9
             Random rnd = new Random();
             Point head = MakeAPoint(GetValue(rnd));
             Point cur = head;
-            while (cur.next != null)
+            for (int i = 1; i < size; i++)
             {
                 cur.next = MakeAPoint(GetValue(rnd));
                 cur = cur.next;
             }
-            cur = head;
             return head;
-            //for (int i = 1; i < size; i++)
-            //{
-            //    cur.next = MakeAPoint(GetValue(rnd));
-            //    cur = cur.next;
-            //}
-            //return head;
         }
         public static Point MakeList(int size)
         {
